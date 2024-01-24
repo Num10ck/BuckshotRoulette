@@ -1,15 +1,13 @@
-﻿using Exiled.API.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
+
+using AutoEvent.Interfaces;
 
 namespace BuckshotRoulette
 {
-    public class Config : IConfig
+    public class BuckshotConfig : EventConfig
     {
-        public bool IsEnabled { get; set; }
-        public bool Debug { get; set; }
+        public ItemType ItemOther { get; set; } = ItemType.KeycardZoneManager;
+        public ItemType ItemSelf { get; set; } = ItemType.KeycardFacilityManager;
     }
 }

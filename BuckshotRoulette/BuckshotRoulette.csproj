@@ -31,9 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp-Publicized, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EXILED.8.7.0\lib\net48\Assembly-CSharp-Publicized.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\Documents\DLL\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-Publicized">
+      <HintPath>..\..\..\..\Documents\DLL\Assembly-CSharp-Publicized.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoEvent-Exiled-9.4.0-Christmas">
+      <HintPath>..\..\..\..\Pictures\AutoEvent-Exiled-9.4.0-Christmas.dll</HintPath>
     </Reference>
     <Reference Include="CommandSystem.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EXILED.8.7.0\lib\net48\CommandSystem.Core.dll</HintPath>
@@ -59,28 +64,40 @@
     <Reference Include="Exiled.Permissions, Version=8.7.0.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\EXILED.8.7.0\lib\net48\Exiled.Permissions.dll</HintPath>
     </Reference>
+    <Reference Include="Mirror">
+      <HintPath>..\..\..\..\Documents\DLL\Mirror.dll</HintPath>
+    </Reference>
     <Reference Include="NorthwoodLib, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EXILED.8.7.0\lib\net48\NorthwoodLib.dll</HintPath>
     </Reference>
     <Reference Include="PluginAPI, Version=13.1.2.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\EXILED.8.7.0\lib\net48\PluginAPI.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\Documents\DLL\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\Documents\DLL\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\Documents\DLL\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
     <Reference Include="YamlDotNet, Version=11.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e, processorArchitecture=MSIL">
       <HintPath>..\packages\EXILED.8.7.0\lib\net48\YamlDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arena.cs" />
+    <Compile Include="ArenaEvents.cs" />
+    <Compile Include="ArenaManipulations.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="Plugin.cs" />
+    <Compile Include="EventHandlers.cs" />
+    <Compile Include="BuckshotRouletteEvent.cs" />
+    <Compile Include="EventManipulations.cs" />
+    <Compile Include="Features\ItemPool.cs" />
+    <Compile Include="PlayerManipulations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shotgun.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
