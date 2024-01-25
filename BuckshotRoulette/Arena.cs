@@ -84,6 +84,12 @@ namespace BuckshotRoulette
             }
         }
 
+        public static void BringToArena()
+        {
+            BringToArena(Player.List.Where(p => p.Role == RoleTypeId.ClassD).First());
+            BringToArena(Player.List.Where(p => p.Role == RoleTypeId.Scientist).First());
+        }
+
         public static void ShotgunControl()
         {
             CurrentPlayer.CurrentItem = null;

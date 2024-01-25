@@ -39,9 +39,6 @@ namespace BuckshotRoulette
             SpawnAutomatically = true
         };
 
-        Shotgun shotgun = new Shotgun();
-        Arena arena = new Arena();
-
         protected override void OnStart()
         {
             for (int i = 0; i < Player.List.Count; i++)
@@ -54,12 +51,16 @@ namespace BuckshotRoulette
 
         protected override IEnumerator<float> BroadcastStartCountdown()
         {
-            // Countdown
+            for (int i = 0; i < 10; i++)
+            {
+                Map.Broadcast(1, $"{i}");
+                yield return Timing.WaitForSeconds(1);
+            }
         }
 
         protected override void CountdownFinished()
         {
-            // Get teleports and triggers
+            Arena.BringToArena();
         }
 
         protected override bool IsRoundDone()
